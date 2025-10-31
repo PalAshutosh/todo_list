@@ -3,9 +3,10 @@ import  {useState} from 'react'
 import "./Todo.css";
 import { TodoForm } from './TodoForm';
 import { TodoList } from './TodoList';
+import { getLocalStorageTodoData, setLocalStorageTodoData } from './TodoLocalStorage';
 
 const Todo = () => {
-const [task, setTask] = useState([]); // it's state for store data and add data after present data.
+const [task, setTask] = useState(() => getLocalStorageTodoData()); // it's state for store data and add data after present data.
 
 const handleFormSubmit = (inputValue) =>{
     const {id, content, checked} = inputValue;
@@ -24,6 +25,8 @@ const handleFormSubmit = (inputValue) =>{
     setTask((prevTask) => [...prevTask , {id, content, checked}]); 
     //note :- if the key and value are the same in a javaScript object, u can use shorthand property names.
 };
+
+setLocalStorageTodoData(task);
 
 // todo handleDeleteTodo function
 const handleDeleteTodo = (value) =>{
