@@ -80,7 +80,10 @@ form input {
   background-color: #f2f3f4;
   color: var(--primary-color);
 }
-
+.form input::placeholder{
+  color: #4a90e2;
+  opacity: 1;
+}
 form input:hover {
   cursor: text;
 }
