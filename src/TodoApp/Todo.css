@@ -145,7 +145,7 @@ span {
   max-width: 35rem;
   padding: 1rem 3rem;
   display: grid;
-  grid-template-columns: 1fr 0.3fr 0.3fr;
+  grid-template-columns: 1fr 0.3fr 0.3fr 0.3fr;
   justify-content: start;
   gap: 1.6rem;
   /*align-items: center;
@@ -159,7 +159,8 @@ li span {
 }
 
 .check-btn,
-.delete-btn {
+.delete-btn , 
+.edit-btn1{
   font-size: 1.5rem;
   /* font-size: 25px; */
   cursor: pointer;
